@@ -4,4 +4,13 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        main.cpp
+        enrutador.cpp \
+        main.cpp \
+        red.cpp
+
+HEADERS += \
+    enrutador.h \
+    red.h
+
+DISTFILES += \
+    enrutadores
