@@ -11,6 +11,7 @@ using namespace std;
 class Red {
 private:
     vector<Enrutador> enrutadores;
+    map<string,map<string,int>>grafoGlobal;
 
 public:
     Red();
@@ -28,10 +29,10 @@ public:
     void eliminarEnlace(string origen, string destino);
 
     // Algoritmos y Cálculo
+    void construirGrafos();
     void actualizarTablaCostos();
     void actualizarCaminos();
     void recalcularTodo();
-
     // Consultas
     void impresion(string origen, string destino);
 };

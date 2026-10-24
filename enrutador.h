@@ -22,13 +22,15 @@ public:
     map<string, int> getVecinos();
     map<string, int> getTablaCostos();
     map<string, vector<string>> getTablaCaminos();
+    void actualizarCosto(string destino,int costo);
+    bool esVecino(string vecino);
 
     // Setters y Modificadores
     void setTablaCostos(map<string, int> nuevosCostos);
     void setTablaCaminos(map<string, vector<string>> nuevosCaminos);
     void agregarVecino(string vecino, int costo);
     void eliminarVecino(string vecino);
-    void limpiarTablas();
+
 };
 
 #endif // ENRUTADOR_H

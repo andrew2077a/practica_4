@@ -1,5 +1,5 @@
 #include "enrutador.h"
-Enrutador::Enrutador(): nombre(""),vecinos(),tablaCostos(),tablaCaminos() {}
+Enrutador::Enrutador(){}
 Enrutador::Enrutador(string nombre):nombre(nombre){}
 
 string Enrutador::getNombre(){
@@ -26,9 +26,11 @@ void Enrutador::agregarVecino(string vecino, int costo){
 void Enrutador::eliminarVecino(string vecino){
     this->vecinos.erase(vecino);
 }
-void Enrutador::limpiarTablas(){
-    this->tablaCostos.clear();
-    this->tablaCaminos.clear();
-}
 
+void Enrutador::actualizarCosto(string destino, int costo){
+    this->tablaCostos[destino]=costo;
+}
+bool Enrutador::esVecino(string vecino){
+    return this->vecinos.find(vecino) != this->vecinos.end();
+}
 
